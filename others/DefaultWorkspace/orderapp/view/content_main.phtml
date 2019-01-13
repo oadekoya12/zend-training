@@ -1,0 +1,41 @@
+<div id="sortform">
+    <?php echo $form?>
+</div>
+
+<div id="addnew">
+    <a href="index.php?order=new">
+        <img src="images/add_32.png"/>
+    </a>
+    <p>
+        <a href="index.php?order=new">New Order</a>
+    </p>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <?php foreach ($config['orders'] as $heading) :?>
+            <th><?php echo $heading?></th>
+        <?php endforeach;?>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($orders as $row) :?>
+        <tr>
+            <td class="center"><?php echo $row['id']?></td>
+            <td class="center"><?php echo $row['date']?></td>
+            <td class="left"><?php echo $row['customer_name']?></td>
+            <td class="left"><?php echo $row['status']?></td>
+            <td class="right"><?php echo $row['amount']?></td>
+            <td class="left"><?php echo $row['description']?></td>
+        </tr>
+    <?php endforeach?>
+    </tbody>
+</table>
+
+<div id="totals">
+    <label>Number of Orders: </label>
+    <b><?php echo $orderCount?></b>
+    <label>Total of Order Amounts: </label>
+    <b><?php echo $total?></b>
+</div>

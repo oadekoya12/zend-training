@@ -1,0 +1,48 @@
+<?php
+/**
+ * This is the main template file, containing the HTML that is common to all pages.
+ * The content of specific pages is included from this file
+ */
+$copyright = '&copy; ' . date('Y') . ' ';
+$copyright .= $config['company']['name'] . ' ' . $config['company']['type'];
+$copyright .= ', a ' . $config['company']['parent'] . ' Company';
+$spacer = '&nbsp; | &nbsp;';
+$content = VIEWPATH . $content . '.phtml';
+?>
+<html>
+<head>
+    <title>Order Inquiry</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div id="logo">
+            <a href="index.php"><img src="images/logo.gif"></a>
+        </div>
+        <div id="toptitle">
+            <h1><?php echo $config['page']['title']?></h1>
+            <h2><?php echo $config['page']['project_name']?></h2>
+        </div>
+        <div id="scriptmeta">
+        <?php foreach($config['page']['script_meta'] as $key => $value) : ?>
+            <span class="metalabel"><?php echo ucfirst($key) . ': '?></span><b><?php echo $value?></b><br>
+        <?php endforeach;?>
+        </div>
+    </div>
+
+    <div id="content">
+        <?php require $content; ?>
+    </div>
+    <div id="footer">
+        <?php echo $copyright?>
+        <div>
+            <a href="<?php echo "http://{$config['company']['name']}"?>"><?php echo $config['company']['name']?>"</a>
+        <?php foreach($config['company']['uris'] as $key => $uri) : ?>
+            <a href="<?php echo "http://{$config['company']['name']}" . $uri?>"><?php echo ucwords(str_replace('_', ' ', $key))?></a><?php echo $spacer?>
+        <?php endforeach;?>
+        </div>
+    </div>
+</div>
+</body>
+</html>
