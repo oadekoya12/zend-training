@@ -1,0 +1,6 @@
+A note on the icon images used in this application
+
+Calendar icon: Created by Joseph Wain (see http://penandthink.com) from http://glyphish.com, licensed under the Creative Commons Attribution 3.0 United States License.
+
+Add (plus sign) icon: From the WooFunction icon set at http://www.woothemes.com/2009/09/woofunction-178-amazing-web-design-icons/, released on the GNU General Public License.
+
