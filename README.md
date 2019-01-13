@@ -1,2 +1,2 @@
 # zend-training
-Assignments are inside public direstory
+Assignments are inside public directory
