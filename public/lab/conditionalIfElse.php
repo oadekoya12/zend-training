@@ -8,7 +8,7 @@ if ( $valueA == $valueB ) {
 } else {
   echo "Not equal";
 }
-
+echo "<br>";
 //output is "Not identical"
 if ( $valueA === $valueB ) {
   echo "Identical";

@@ -8,7 +8,7 @@ if ( ( $valueA >= 50 ) xor ( $valueB === '20') ) {
 } else {
   echo "Oranges";
 }
-
+echo "<br>";
 //output "Black"
 if ( ( $valueA >= '5' ) xor ( $valueB === 20 ) ) {
   echo "White";
