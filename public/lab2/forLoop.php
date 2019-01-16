@@ -3,12 +3,11 @@
 * @output = 5 to 99
 **/
 $max = 100;
-for ($x = 5; $x < $max; $x++)
-{
-  // This if evaluation checks to see if number is odd or even
-  $test = TRUE;
+for ($x = 5; $x < $max; $x++) {
 
+  // This if evaluation checks to see if number is odd or even
   // remove all the multiple of 2 and 3 numbers
+  $test = TRUE;
   for($i = 3; $i < $x; $i++) {
     if(($x % $i) === 0) {
       $test = FALSE;

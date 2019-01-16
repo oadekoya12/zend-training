@@ -9,9 +9,5 @@
 $lunch = ['Sandwich', 'Roll-up', 'Soup', 'Salad', 'Protein', 'Nuts'];
 print_r($lunch);
 foreach ($lunch as $key => $value) {
-  //this did not work
-  //($value === 'Salad') ? echo 'Salad is a good choice for lunch' : null;
-  if (($value === 'Salad')) {
-    echo 'Salad is a good choice for lunch' ;
-  }
+  echo (($value === 'Salad') ? 'Salad is a good choice for lunch' : null);
 }

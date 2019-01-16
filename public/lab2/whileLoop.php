@@ -8,18 +8,15 @@
 *    3. Output each updated values.
 **/
 $slide = [];
-$i = 1;
 $cars = [
-    ["Make"=>"Toyota", "Model"=>"Corolla", "Color"=>"White", "Mileage"=>24000, "Status"=>"Sold"],
-    ["Make"=>"Toyota", "Model"=>"Camry", "Color"=>"Black", "Mileage"=>56000, "Status"=>"Available"],
-    ["Make"=>"Honda", "Model"=>"Accord", "Color"=>"White", "Mileage"=>15000, "Status"=>"Sold"],
-    ["Make"=>"Nissan", "Model"=>"Juke", "Color"=>"Red", "Mileage"=>4500, "Status"=>"Sold"]
+    ['Make'=>'Toyota', 'Model'=>'Corolla', 'Color'=>'White', 'Mileage'=>24000, 'Status'=>'Sold'],
+    ['Make'=>'Toyota', 'Model'=>'Camry', 'Color'=>'Black', 'Mileage'=>56000, 'Status'=>'Available'],
+    ['Make'=>'Honda', 'Model'=>'Accord', 'Color'=>'White', 'Mileage'=>15000, 'Status'=>'Sold'],
+    ['Make'=>'Nissan', 'Model'=>'Juke', 'Color'=>'Red', 'Mileage'=>4500, 'Status'=>'Sold']
 ];
-$arrcount = count($cars);
 
-while ($i <= $arrcount) {
+while (count($cars)) {
   $slide = array_pop ($cars);
   echo $slide['Color'] .' '. $slide['Make'] .' '. $slide['Model'] .' with '. $slide['Mileage'] . ' Mileage is '. $slide['Status'] . PHP_EOL;
-  echo "<br>";
-  $arrcount = count($cars);
+  echo '<br>';
 }

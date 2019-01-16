@@ -10,6 +10,7 @@ $astronaut1 = [
   'firstName' => 'Mark',
   'lastName' => 'Watney',
   'specialty' => 'Botanist'
+  // normally the country would be part of astronaut data
 ];
 $astronaut2 = [
   'firstName' => 'Melissa',
@@ -22,24 +23,27 @@ $astronaut3 = [
   'specialty' => 'Computer Specialist'
 ];
 $astronaut = [$astronaut1,$astronaut2,$astronaut3];
+$output = '';
 foreach ($astronaut as $value) {
+
   //why can't I use $value['firstName'].' '.$value['lastName']
   //as an argument in the switch statement
+  $name = $value['firstName'] . ' ' . $value['lastName'];
 
-  $name = $value['firstName'].' '.$value['lastName'];
   // echo "$name" . PHP_EOL;
   switch ($name) {
     case 'Mark Watney':
-      echo $name . ' is from Britain'. PHP_EOL;
+      $output .= $name . ' is from Britain'. PHP_EOL;
       break;
 
     case 'Melissa Lewis':
-      echo $name . ' is from United State' . PHP_EOL;
+      $output .= $name . ' is from United State' . PHP_EOL;
       break;
 
     case 'Beth Johanssen':
-          echo $name . ' is from Germany'. PHP_EOL;
-          break;
+      $output .= $name . ' is from Germany'. PHP_EOL;
+      break;
   }
-  echo PHP_EOL;
 }
+echo $output;
+

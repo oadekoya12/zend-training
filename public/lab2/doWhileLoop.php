@@ -12,10 +12,8 @@ $cars = [
 ];
 
 $slide = [];
-$i = 1;
 do {
   $slide = array_pop ($cars);
   echo $slide['Make'] .' '. $slide['Module'] .' was sold at '. $slide['Price'] . ' on '. $slide['Date'] . PHP_EOL;
-  echo "<br>";
-  $arrcount = count($cars);
-} while ($i <= $arrcount);
+  echo '<br>';
+} while (count($cars));

@@ -1,7 +1,7 @@
 <?php
-$dayOfWeek = "Monday";
+$dayOfWeek = "Friday";
 if ( $dayOfWeek === "Friday" ) {
-echo "See you on Monday";
+	echo "See you on Monday";
 } else {
-echo "See you tomorrow";
+	echo "See you tomorrow";
 }
