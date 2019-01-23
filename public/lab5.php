@@ -9,7 +9,7 @@ print_r($_POST);
 echo PHP_EOL;
 
 $usernamePost = $_POST['username'] ? $_POST['username'] : '';
-$passwordPost = $_POST['username'] ? $_POST['username'] : '';
+$passwordPost = $_POST['password'] ? $_POST['password'] : '';
 ?>
 <html>
 
