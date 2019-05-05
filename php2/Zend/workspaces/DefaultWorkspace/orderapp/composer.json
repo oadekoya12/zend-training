@@ -1,0 +1,23 @@
+{
+    "name": "OrderApp",
+    "description": "A orderapp to play in",
+    "keywords": [
+    	"orderapp"
+    ],
+    "homepage": "http://orderapp/",
+    "require": {
+        "php": ">=7.2",
+        "guzzlehttp/guzzle": "~6.3",
+        "zendframework/zend-form": "*",
+        "zendframework/zend-eventmanager": "^3.2",
+        "zendframework/zend-mvc": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "orderapp\\": "src/"
+        }
+    }
+}
