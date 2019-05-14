@@ -1,5 +1,6 @@
 <?php
 // Class definition
+// declare(strict_types = 1);
 class Automobile
 {
     // Declare  properties
@@ -21,7 +22,6 @@ class Car extends Automobile
     public function __toString(){
       return var_export($this, TRUE);
     }
-
 }
 $car = new Car();
 $car->setparam('Regular','1.8L');
@@ -31,3 +31,19 @@ echo PHP_EOL;
 $car->setparam('Deluxe','5.0', '6');
 echo $car;
 echo PHP_EOL;
+
+$car->setparam('Deluxe');
+
+
+try {
+    echo $car;
+}
+catch (ArgumentCountError $e) {
+  echo '***********************';
+  echo $e->getMessage();
+  echo $e->getCode();
+}
+catch (Exception $e) {
+  echo '***********************';
+  echo $e->getMessage();
+}
