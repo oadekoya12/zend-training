@@ -1,0 +1,114 @@
+
+cd ~
+mkdir builddir && cd builddir
+wget https://www.php.net/distributions/php-7.3.5.tar.gz
+tar -xvf php-7.3.5.tar.gz && cd php-7.3.5
+sudo apt-get install libxml2-dev
+sudo apt-get install libssl-dev
+sudo apt-get install libcurl3-dev
+sudo apt-get install zlib1g-dev
+
+sudo ./configure --with-config-file-path=/etc/php/7.3.5/cli --with-pear=/usr/share/php --enable-libxml=/usr --with-mysqli --with-zlib --with-iconv=shared --with-pdo-mysql=shared --enable-pdo --with-openssl --with-curl
+
+sudo make && sudo make install
+
+
+--------------------------------------------------------------------------------
+Build complete.
+Don't forget to run 'make test'.
+
+Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20180731/
+Installing PHP CLI binary:        /usr/local/bin/
+Installing PHP CLI man page:      /usr/local/php/man/man1/
+Installing phpdbg binary:         /usr/local/bin/
+Installing phpdbg man page:       /usr/local/php/man/man1/
+Installing PHP CGI binary:        /usr/local/bin/
+Installing PHP CGI man page:      /usr/local/php/man/man1/
+Installing build environment:     /usr/local/lib/php/build/
+Installing header files:          /usr/local/include/php/
+Installing helper programs:       /usr/local/bin/
+
+  program: phpize
+  program: php-config
+Installing man pages:             /usr/local/php/man/man1/
+  page: phpize.1
+  page: php-config.1
+Installing PEAR environment:      /usr/share/php/
+[PEAR] Archive_Tar    - upgraded:  1.4.7
+[PEAR] Console_Getopt - already installed: 1.4.2
+[PEAR] Structures_Graph- already installed: 1.1.1
+[PEAR] XML_Util       - already installed: 1.4.3
+[PEAR] PEAR           - upgraded:  1.10.9
+Wrote PEAR system config file at: /usr/local/etc/pear.conf
+You may want to add: /usr/share/php to your php.ini include_path
+/home/vagrant/builddir/php-7.3.5/build/shtool install -c ext/phar/phar.phar /usr/local/bin
+ln -s -f phar.phar /usr/local/bin/phar
+Installing PDO headers:           /usr/local/include/php/ext/pdo/
+--------------------------------------------------------------------------------
+
+php -v
+PHP 7.3.5-1+ubuntu18.04.1+deb.sury.org+1 (cli) (built: May  3 2019 10:00:24) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.5, Copyright (c) 1998-2018 Zend Technologies
+    with Xdebug v2.7.0, Copyright (c) 2002-2019, by Derick Rethans
+    with Zend OPcache v7.3.5-1+ubuntu18.04.1+deb.sury.org+1, Copyright (c) 1999-2018, by Zend Technologies
+
+--------------------------------------------------------------------------------
+php -m
+[PHP Modules]
+calendar
+Core
+ctype
+curl
+date
+dom
+exif
+fileinfo
+filter
+ftp
+gd
+gettext
+
+hash
+iconv
+json
+ldap
+libxml
+mbstring
+mysqli
+mysqlnd
+openssl
+pcntl
+pcre
+PDO
+pdo_mysql
+Phar
+posix
+readline
+Reflection
+session
+shmop
+SimpleXML
+soap
+sockets
+sodium
+SPL
+standard
+sysvmsg
+sysvsem
+sysvshm
+tidy
+tokenizer
+wddx
+xdebug
+xml
+xmlreader
+xmlwriter
+xsl
+Zend OPcache
+zip
+zlib
+
+[Zend Modules]
+Xdebug
+Zend OPcache
